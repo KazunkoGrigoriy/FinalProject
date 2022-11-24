@@ -13,7 +13,6 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Website.Data;
-using Website.DbDataContext;
 using Website.Interfaces;
 using Website.Models;
 
@@ -31,29 +30,6 @@ namespace Website
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication("Cookies")
-                .AddCookie("Cookie", config =>
-                {
-                    config.LoginPath = "Account/Admin";
-                });
-
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("Administrator", builder =>
-                {
-                    builder.RequireClaim(ClaimTypes.Role, "Admin");
-                });
-                options.AddPolicy("Guest", builder =>
-                {
-                    builder.RequireClaim(ClaimTypes.Role, "Guest");
-                });
-            });
-
-            services.AddDbContext<DbDataUsers>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-            });
-
             services.AddTransient<IRequestsData, DataRequests>();
 
             services.AddMvc(option =>
@@ -66,10 +42,6 @@ namespace Website
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {           
             app.UseStaticFiles();
-
-            app.UseAuthentication();
-
-            app.UseAuthorization();
 
             app.UseMvc(routing =>
             {
