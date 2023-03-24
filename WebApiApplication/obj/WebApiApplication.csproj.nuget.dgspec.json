@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\WebApiApplication\\WebApiApplication.csproj": {}
+    "D:\\projects\\FinalProject\\WebApiApplication\\WebApiApplication.csproj": {}
   },
   "projects": {
-    "D:\\projects\\WebApiApplication\\WebApiApplication.csproj": {
+    "D:\\projects\\FinalProject\\WebApiApplication\\WebApiApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\WebApiApplication\\WebApiApplication.csproj",
+        "projectUniqueName": "D:\\projects\\FinalProject\\WebApiApplication\\WebApiApplication.csproj",
         "projectName": "WebApiApplication",
-        "projectPath": "D:\\projects\\WebApiApplication\\WebApiApplication.csproj",
+        "projectPath": "D:\\projects\\FinalProject\\WebApiApplication\\WebApiApplication.csproj",
         "packagesPath": "C:\\Users\\gkazu\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\WebApiApplication\\obj\\",
+        "outputPath": "D:\\projects\\FinalProject\\WebApiApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gkazu\\AppData\\Roaming\\NuGet\\NuGet.Config",

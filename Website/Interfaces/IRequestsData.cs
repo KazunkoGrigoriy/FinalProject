@@ -8,9 +8,6 @@ namespace Website.Interfaces
 {
     public interface IRequestsData
     {
-        IEnumerable<Request> GetRequests();
         void AddRequest(Request request);
-        void DeleteRequest(int id);
-        void UpdateRequest(int id);
     }
 }

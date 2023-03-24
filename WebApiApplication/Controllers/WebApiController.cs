@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -45,10 +44,10 @@ namespace WebApiApplication.Controllers
             return (Request)_context.Requests.Where(request => request.Id == id);
         }
 
-        [HttpPut("{id}")]
-        public void UpdateRequest(int id)
+        [HttpPut("{request}")]
+        public void UpdateRequest(Request request)
         {
-            _context.Update(id);
+            _context.Update(request);
             _context.SaveChanges();
         }
     }
